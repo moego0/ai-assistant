@@ -1,0 +1,66 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environment
+venv/
+env/
+ENV/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Environment variables and sensitive data
+.env
+settings.json
+test_settings.json
+*.key
+*.pem
+*.crt
+
+# Audio files
+*.mp3
+*.wav
+*.ogg
+
+# Logs and temporary files
+*.log
+*.aux
+*.out
+*.synctex.gz
+temp_*
+
+# Local development
+.DS_Store
+Thumbs.db
+
+# LaTeX files
+*.aux
+*.log
+*.out
+*.synctex.gz
+*.pdf
+
+# Generated files
+generated_* 
