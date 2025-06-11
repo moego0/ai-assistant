@@ -144,61 +144,28 @@ graph TD
 - **Command Sequences**: Multi-step automation
 - **Settings Persistence**: Saved configurations across sessions
 
-## 🔑 API Setup Guide
+## 🔑 Quick API Setup
 
-Get started with free API keys to unlock AI Assistant's features:
+<table>
+<tr>
+  <td>
+    <b>🗣️ Wake Word (Picovoice)</b><br/>
+    <a href="https://console.picovoice.ai/">Get Key →</a><br/>
+    <small>Free: Default wake words & basic usage</small>
+  </td>
+  <td>
+    <b>🧠 AI Features (Gemini)</b><br/>
+    <a href="https://aistudio.google.com/apikey">Get Key →</a><br/>
+    <small>Free: Gemini Pro with generous limits</small>
+  </td>
+</tr>
+</table>
 
-```mermaid
-flowchart TD
-    subgraph "API Setup Process"
-        A[Start Setup] --> B{Choose API Type}
-        B --> |Wake Word| C[Visit Picovoice Console]
-        B --> |AI Features| D[Visit Google AI Studio]
-        
-        C --> E[Create Free Account]
-        D --> F[Sign in with Google]
-        
-        E --> G[Get Porcupine API Key]
-        F --> H[Get Gemini API Key]
-        
-        G --> I[Basic: Free Tier<br/>- Default wake words<br/>- Limited usage]
-        G --> J[Pro: Paid Tier<br/>- Custom wake words<br/>- Higher usage limits]
-        
-        H --> K[Free Tier<br/>- Gemini Pro<br/>- Limited usage]
-        H --> L[Paid Tier<br/>- Higher quotas<br/>- Advanced features]
-        
-        I --> M[Configure in App]
-        J --> M
-        K --> M
-        L --> M
-    end
+Add keys to `.env`:
+```env
+PICOVOICE_API_KEY=xxxxx
+GEMINI_API_KEY=xxxxx
 ```
-
-### Wake Word Detection API (Picovoice)
-1. Visit [Picovoice Console](https://console.picovoice.ai/)
-2. Create a free account
-3. Get your API key
-4. Features:
-   - Free Tier:
-     * Default wake words ("computer", "jarvis", etc.)
-     * Basic usage limits
-   - Pro Tier:
-     * Train custom wake words
-     * Higher usage limits
-     * Priority support
-
-### AI Features API (Google Gemini)
-1. Visit [Google AI Studio](https://aistudio.google.com/apikey)
-2. Sign in with your Google account
-3. Get your API key
-4. Features:
-   - Free Tier:
-     * Access to Gemini Pro
-     * Generous usage limits
-   - Paid Tier:
-     * Higher API quotas
-     * Access to more powerful models
-     * Advanced features
 
 ## 🚀 Quick Start
 
@@ -480,7 +447,7 @@ git push origin feature/AmazingFeature
    - Check camera connection
 
 3. **API Key errors**
-   - Verify keys in .env file
+   - Get a valid API key from Picovoice and Gemini AI
    - Check API key format
    - Ensure free tier limits not exceeded
 
@@ -488,6 +455,34 @@ git push origin feature/AmazingFeature
 - Open an issue on GitHub
 - Check existing issues
 - Include error messages and system info
+
+## 🎯 How to Use
+
+### Wake Word
+To activate the assistant, simply say: **"Computer"**
+
+### Available Commands
+
+| Command | Description | Example |
+|---------|-------------|---------|
+| `Open [application]` | Launch applications | "Open Chrome", "Open Spotify" |
+| `Search for [query]` | Search the web | "Search for gold preices today" |
+| `What's the time?` | Get current time/date | "What's the time?" |
+| `Type [text]` | Type text via voice | "Type Hello World" |
+| `Genrate code` | Genrate code  | "genrate code for python calculator" |
+| `control devices` | Open and close lights | "open red light" |
+
+
+### Command Tips
+- Speak clearly and at a normal pace
+- Wait for the wake word acknowledgment before giving a command
+- Commands are case-insensitive
+- For application names, use common names (e.g., "chrome" instead of "google chrome")
+- Don't forget to initialize apps and devices before using them
+- Use the `Genrate code` command to generate code
+- Use the `control devices` command to open and close lights
+- Use the `Open [application]` command to launch applications
+
 
 ---
 <div align="center">
