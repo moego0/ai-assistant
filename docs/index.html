@@ -554,6 +554,87 @@
                 grid-template-columns: 1fr;
             }
         }
+
+        .papers-section {
+            margin: 20px 0;
+        }
+
+        .paper-card {
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 6px var(--shadow-color);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .paper-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px var(--shadow-color);
+        }
+
+        .paper-card i.fa-file-pdf {
+            font-size: 3em;
+            color: #e74c3c;
+            margin-bottom: 20px;
+        }
+
+        .paper-card h3 {
+            margin: 15px 0;
+            color: var(--text-color);
+        }
+
+        .paper-card p {
+            color: var(--text-color);
+            opacity: 0.9;
+            margin-bottom: 20px;
+        }
+
+        .paper-details {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 20px 0;
+            color: var(--text-color);
+            opacity: 0.8;
+        }
+
+        .paper-details span {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .download-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--primary-color);
+            color: white;
+            padding: 12px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        .download-button:hover {
+            transform: translateY(-2px);
+            background: #2980b9;
+        }
+
+        @media (max-width: 768px) {
+            .paper-card {
+                padding: 20px;
+            }
+
+            .paper-details {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -672,6 +753,24 @@
                     <i class="fas fa-lightbulb"></i>
                     <p>"Control devices"</p>
                     <small>e.g., "Open red light"</small>
+                </div>
+            </div>
+        </section>
+
+        <section class="demo-section">
+            <h2>Research Papers</h2>
+            <div class="papers-section">
+                <div class="paper-card">
+                    <i class="fas fa-file-pdf"></i>
+                    <h3>AI Assistant: Voice-Controlled Smart Home Automation</h3>
+                    <p>Research paper detailing the architecture, implementation, and evaluation of our AI Assistant system.</p>
+                    <div class="paper-details">
+                        <span><i class="fas fa-calendar"></i> 2024</span>
+                        <span><i class="fas fa-file-alt"></i> PDF, 1.2MB</span>
+                    </div>
+                    <a href="papers/AI_Assistant_Research_Paper.pdf" class="download-button" download>
+                        <i class="fas fa-download"></i> Download Paper
+                    </a>
                 </div>
             </div>
         </section>
