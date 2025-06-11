@@ -60,7 +60,6 @@ Thumbs.db
 *.log
 *.out
 *.synctex.gz
-*.pdf
 
 # Generated files
 generated_* 

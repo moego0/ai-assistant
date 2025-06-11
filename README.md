@@ -482,6 +482,7 @@ To activate the assistant, simply say: **"Computer"**
 - Use the `Genrate code` command to generate code
 - Use the `control devices` command to open and close lights
 - Use the `Open [application]` command to launch applications
+- You can integrate this app with Arduino or Home assistant to control you hame and devices
 
 
 ---
